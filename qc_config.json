@@ -4,8 +4,14 @@
     "codec_contains": "pcm",
     "sample_rate_hz": 48000,
     "bit_depth": 24,
-    "channels_allowed": [2]
+    "channels_allowed": [2],
+    "disallow_embedded_artwork": true
   },
+  "low_end_stereo": {
+    "enabled": true,
+    "cutoff_hz": 120,
+    "side_must_be_db_below_mid": 20.0
+  }
   "masters": {
     "BEATPORT MASTER": {
       "lufs_min": -8.0,
