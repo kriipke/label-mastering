@@ -1,0 +1,37 @@
+{
+  "expected": {
+    "format": "wav",
+    "codec_contains": "pcm",
+    "sample_rate_hz": 48000,
+    "bit_depth": 24,
+    "channels_allowed": [2]
+  },
+  "masters": {
+    "BEATPORT MASTER": {
+      "lufs_min": -8.0,
+      "lufs_max": -6.0,
+      "lufs_hard_ceiling": -6.0,
+      "true_peak_max_db": -1.0
+    },
+    "SPOTIFY MASTER": {
+      "lufs_target": -11.0,
+      "lufs_tolerance": 1.0,
+      "true_peak_max_db": -1.0
+    },
+    "VINYL PREMASTER": {
+      "lufs_min": -12.0,
+      "lufs_max": -10.0,
+      "true_peak_max_db": -3.0
+    }
+  },
+  "naming": {
+    "strict": true,
+    "dash": " – ",
+    "catalog_regex": "\\(IMR-\\d{3}\\)",
+    "master_types": ["BEATPORT MASTER", "SPOTIFY MASTER", "VINYL PREMASTER"]
+  },
+  "report": {
+    "json_path": "qc_report.json",
+    "markdown_path": "qc_report.md"
+  }
+}
